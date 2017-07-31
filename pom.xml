@@ -134,7 +134,7 @@
     </dependency>
 
     <!-- Test dependencies -->
-    <dependency>
+<!--     <dependency>
       <groupId>io.vertx</groupId>
       <artifactId>vertx-unit</artifactId>
       <scope>test</scope>
@@ -162,7 +162,7 @@
       <artifactId>rest-assured</artifactId>
       <version>3.0.2</version>
       <scope>test</scope>
-    </dependency>
+    </dependency> -->
   </dependencies>
 
   <build>
