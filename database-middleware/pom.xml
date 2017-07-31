@@ -7,7 +7,7 @@
   <parent>
     <artifactId>vertx-blueprint-microservice</artifactId>
     <groupId>io.vertx.blueprint</groupId>
-    <version>3.4.1</version>
+    <version>3.4.2</version>
   </parent>
 
   <artifactId>database-middleware</artifactId>

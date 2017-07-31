@@ -133,7 +133,7 @@ public class CounterService {
   }
 
 
-  public static CounterService newInstance(io.vertx.blueprint.microservice.cache.CounterService arg) {
+  public static  CounterService newInstance(io.vertx.blueprint.microservice.cache.CounterService arg) {
     return arg != null ? new CounterService(arg) : null;
   }
 }

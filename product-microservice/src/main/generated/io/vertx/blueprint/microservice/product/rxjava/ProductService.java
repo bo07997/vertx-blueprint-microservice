@@ -224,7 +224,7 @@ public class ProductService {
   }
 
 
-  public static ProductService newInstance(io.vertx.blueprint.microservice.product.ProductService arg) {
+  public static  ProductService newInstance(io.vertx.blueprint.microservice.product.ProductService arg) {
     return arg != null ? new ProductService(arg) : null;
   }
 }

@@ -116,7 +116,7 @@ public class StoreCRUDService {
   }
 
 
-  public static StoreCRUDService newInstance(io.vertx.blueprint.microservice.store.StoreCRUDService arg) {
+  public static  StoreCRUDService newInstance(io.vertx.blueprint.microservice.store.StoreCRUDService arg) {
     return arg != null ? new StoreCRUDService(arg) : null;
   }
 }

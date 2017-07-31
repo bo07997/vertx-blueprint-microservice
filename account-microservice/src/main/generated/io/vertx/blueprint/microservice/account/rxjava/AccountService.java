@@ -223,7 +223,7 @@ public class AccountService {
   }
 
 
-  public static AccountService newInstance(io.vertx.blueprint.microservice.account.AccountService arg) {
+  public static  AccountService newInstance(io.vertx.blueprint.microservice.account.AccountService arg) {
     return arg != null ? new AccountService(arg) : null;
   }
 }

@@ -56,7 +56,7 @@ public interface ShoppingCartService {
   public ShoppingCartService getShoppingCart(String userId, Handler<AsyncResult<ShoppingCart>> resultHandler);
 
 
-  public static ShoppingCartService newInstance(io.vertx.blueprint.microservice.cart.ShoppingCartService arg) {
+  public static  ShoppingCartService newInstance(io.vertx.blueprint.microservice.cart.ShoppingCartService arg) {
     return arg != null ? new ShoppingCartServiceImpl(arg) : null;
   }
 }

@@ -18,6 +18,7 @@ package io.vertx.blueprint.microservice.payment.rxjava;
 
 import java.util.Map;
 import rx.Observable;
+import rx.Single;
 import io.vertx.blueprint.microservice.payment.Payment;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Handler;
@@ -32,15 +33,21 @@ import io.vertx.core.Handler;
  * NOTE: This class has been automatically generated from the {@link io.vertx.blueprint.microservice.payment.PaymentQueryService original} non RX-ified interface using Vert.x codegen.
  */
 
+@io.vertx.lang.rxjava.RxGen(io.vertx.blueprint.microservice.payment.PaymentQueryService.class)
 public class PaymentQueryService {
 
-  final io.vertx.blueprint.microservice.payment.PaymentQueryService delegate;
+  public static final io.vertx.lang.rxjava.TypeArg<PaymentQueryService> __TYPE_ARG = new io.vertx.lang.rxjava.TypeArg<>(
+    obj -> new PaymentQueryService((io.vertx.blueprint.microservice.payment.PaymentQueryService) obj),
+    PaymentQueryService::getDelegate
+  );
 
+  private final io.vertx.blueprint.microservice.payment.PaymentQueryService delegate;
+  
   public PaymentQueryService(io.vertx.blueprint.microservice.payment.PaymentQueryService delegate) {
     this.delegate = delegate;
   }
 
-  public Object getDelegate() {
+  public io.vertx.blueprint.microservice.payment.PaymentQueryService getDelegate() {
     return delegate;
   }
 
@@ -56,10 +63,10 @@ public class PaymentQueryService {
    * Initialize the persistence.
    * @return 
    */
-  public Observable<Void> initializePersistenceObservable() { 
-    io.vertx.rx.java.ObservableFuture<Void> resultHandler = io.vertx.rx.java.RxHelper.observableFuture();
-    initializePersistence(resultHandler.toHandler());
-    return resultHandler;
+  public Single<Void> rxInitializePersistence() { 
+    return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut -> {
+      initializePersistence(fut);
+    }));
   }
 
   /**
@@ -76,10 +83,10 @@ public class PaymentQueryService {
    * @param payment payment entity
    * @return 
    */
-  public Observable<Void> addPaymentRecordObservable(Payment payment) { 
-    io.vertx.rx.java.ObservableFuture<Void> resultHandler = io.vertx.rx.java.RxHelper.observableFuture();
-    addPaymentRecord(payment, resultHandler.toHandler());
-    return resultHandler;
+  public Single<Void> rxAddPaymentRecord(Payment payment) { 
+    return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut -> {
+      addPaymentRecord(payment, fut);
+    }));
   }
 
   /**
@@ -96,14 +103,14 @@ public class PaymentQueryService {
    * @param payId payment id
    * @return 
    */
-  public Observable<Payment> retrievePaymentRecordObservable(String payId) { 
-    io.vertx.rx.java.ObservableFuture<Payment> resultHandler = io.vertx.rx.java.RxHelper.observableFuture();
-    retrievePaymentRecord(payId, resultHandler.toHandler());
-    return resultHandler;
+  public Single<Payment> rxRetrievePaymentRecord(String payId) { 
+    return Single.create(new io.vertx.rx.java.SingleOnSubscribeAdapter<>(fut -> {
+      retrievePaymentRecord(payId, fut);
+    }));
   }
 
 
-  public static PaymentQueryService newInstance(io.vertx.blueprint.microservice.payment.PaymentQueryService arg) {
+  public static  PaymentQueryService newInstance(io.vertx.blueprint.microservice.payment.PaymentQueryService arg) {
     return arg != null ? new PaymentQueryService(arg) : null;
   }
 }

@@ -85,7 +85,7 @@ public class CheckoutService {
   }
 
 
-  public static CheckoutService newInstance(io.vertx.blueprint.microservice.cart.CheckoutService arg) {
+  public static  CheckoutService newInstance(io.vertx.blueprint.microservice.cart.CheckoutService arg) {
     return arg != null ? new CheckoutService(arg) : null;
   }
 }

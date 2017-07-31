@@ -139,7 +139,7 @@ public class OrderService {
   }
 
 
-  public static OrderService newInstance(io.vertx.blueprint.microservice.order.OrderService arg) {
+  public static  OrderService newInstance(io.vertx.blueprint.microservice.order.OrderService arg) {
     return arg != null ? new OrderService(arg) : null;
   }
 }
